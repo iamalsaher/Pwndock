@@ -1,0 +1,6 @@
+#!/bin/bash
+if ! [ -z "$1" ] ; then
+    docker run --rm --detach -it -v $(pwd)/challenge:/challenge -w="/challenge" --name pwndock$1 iamalsaher/pwndock:$1 bash
+else
+    echo "Usage $0 <libc-version>"
+fi
