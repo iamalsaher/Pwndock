@@ -1,7 +1,7 @@
 FROM ubuntu:tag
 
 ENV DEBIAN_FRONTEND noninteractive
-
+# RUN sed -i -re 's/([a-z]{2}\.)?archive.ubuntu.com|security.ubuntu.com/old-releases.ubuntu.com/g' /etc/apt/sources.list
 RUN dpkg --add-architecture i386 \
     && apt-get update \
     && apt -y install --no-install-recommends locales strace ltrace patchelf socat gdb git curl ruby-full python-dev python-pip python3-dev python3-pip libc6-dbg libc6-dbg:i386 cmake gcc g++ pkg-config libglib2.0-dev nano\
