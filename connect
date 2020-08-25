@@ -1,0 +1,6 @@
+#!/bin/bash
+if ! [ -z "$1" ] ; then
+    docker exec -it pwndock$1 bash
+else
+    echo "Usage $0 <libc-version>"
+fi
