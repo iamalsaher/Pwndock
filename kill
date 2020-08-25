@@ -1,0 +1,6 @@
+#!/bin/bash
+if ! [ -z "$1" ] ; then
+    docker kill pwndock$1 >/dev/null && echo "[+] Stopped"
+else
+    echo "Usage $0 <libc-version>"
+fi
